@@ -8,7 +8,8 @@ class Conta{
     }
 
    saque(num){
-       this.saldo -= num;
+        this.saldo -= num; 
+
    } 
 
 }
@@ -19,5 +20,8 @@ conta.deposito(100);
 console.log(conta.saldo);
 
 conta.saque(280);
+console.log(conta.saldo);
+
+conta.deposito(1000);
 console.log(conta.saldo);
 
