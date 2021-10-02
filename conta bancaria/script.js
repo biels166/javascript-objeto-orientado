@@ -4,12 +4,12 @@ class Conta{
     }
 
     deposito(num){
-        let saldo = saldo + num;
+        this.saldo = saldo + num;
         console.log(saldo);
     }
     
     saque(num){
-        let saldo = saldo - num;
+        this.saldo = saldo - num;
         if((saldo - num) < 0){
             console.log("Saldo insuficiente.")
         } else{
@@ -19,8 +19,9 @@ class Conta{
     }
 }
 
-let saldo = 0;
-console.log(saldo);
+let conta = new Conta(1000);
 
-Conta.deposito(1000);
-console.log(saldo);
+conta.deposito(100);
+
+console.log(conta.saldo);
+
