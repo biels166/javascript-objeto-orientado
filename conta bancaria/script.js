@@ -9,7 +9,6 @@ class Conta{
 
    saque(num){
         this.saldo -= num; 
-
    } 
 
 }
