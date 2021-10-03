@@ -1,6 +1,6 @@
 class Endereco {
     constructor(end) {
-        this.end = end
+        this.end = end;
     }
     
     alteraEndereco(end){
@@ -35,7 +35,6 @@ class Endereco {
     
 }
 
-
 let endereco = new Endereco([{
     id: 01,
     rua: "Ernesto Manograsso",
@@ -45,6 +44,8 @@ let endereco = new Endereco([{
     cidade: "São Paulo",
     estado: "SP"
 }]);
+
+console.log(endereco.end);
 
 
 endereco.alteraEndereco({id:01, rua:"Av. Brigadeiro  Faria Lima", num: 4300, complemento:"Apartamento 93", bairro:"Itaim Bibi", cidade:"São Paulo", estado:"SP"});
