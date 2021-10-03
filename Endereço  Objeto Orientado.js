@@ -1,46 +1,57 @@
 class Endereco {
-    constructor(end, bairro, cidade, estado) {
+    constructor(end) {
         this.end = end
-        this.bairro = bairro;
-        this.cidade = cidade;
-        this.estado = estado;
     }
     
-    alteraEndereco(end, bairro, cidade, estado){
+    alteraEndereco(end){
         for(let verificaId in this.end){
             if(this.end[verificaId].id == end.id){
                 this.end[verificaId] = end;
-                this.bairro = bairro;
-                this.cidade = cidade;
-                this.estado = estado;
             }
         }
         
     }
     
-    adicionaEndereco(end, bairro, cidade, estado){
+    adicionaEndereco(end){
         for(let verificaId in this.end){
             if(this.end[verificaId].id != end.id){
-                this.end.push(endereco);
+          
+                let endereco = new Endereco([{
+                id: 'number',
+                rua: 'string',
+                num: 'number',
+                complemento: 'string',
+                bairro: 'string',
+                cidade: 'string',
+                estado: 'string'
+              }]);
+              
+               let endClientes = this.end.push(end);
             }
             
         }
     }
+    
+    
 }
-
 
 
 let endereco = new Endereco([{
     id: 01,
     rua: "Ernesto Manograsso",
     num: 939,
-    complemento: "Casa"
-}], "São Matheus", "São Paulo", "SP");
+    complemento: "Casa",
+    bairro: "São Mateus",
+    cidade: "São Paulo",
+    estado: "SP"
+}]);
 
 
-console.log(endereco);
+endereco.alteraEndereco({id:01, rua:"Av. Brigadeiro  Faria Lima", num: 4300, complemento:"Apartamento 93", bairro:"Itaim Bibi", cidade:"São Paulo", estado:"SP"});
 
-endereco.alteraEndereco({id:01, rua:"Av. Brigadeiro  Faria Lima", num: 4300, complemento:"Apartamento 93"}, "Itaim Bibi", "São Paulo", "SP");
+endereco.adicionaEndereco({id:02, rua:"Av. Sapopemba", num: 40, complemento:"Apartamento 1", bairro:"São Matheus", cidade:"São Paulo", estado:"SP"});
 
+console.log(endereco.end);
 console.log("\n");
-console.log(endereco);
+
+
