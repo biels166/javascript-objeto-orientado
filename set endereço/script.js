@@ -6,9 +6,28 @@ class Endereco{
         this.estado = estado;
     }
 
+    setRua(novaRua){
+        this.rua = novaRua;
+    }
+
+    setBairro(novoBairro){
+        this.bairro = novoBairro;
+    }
+
+    setCidade(novaCidade){
+        this.cidade = novaCidade;
+    }
+
+    setEstado(novoEstado){
+        this.estado = novoEstado;
+    }
 
 }
 
 
-let endereco = new Encereço("Rua Ernesto Manograsso", "são Matheus", "São Paulo", "SP");
+let endereco = new Endereco("Rua Ernesto Manograsso", "São Matheus", "São Paulo", "SP");
+console.log(endereco);
+
+endereco.setRua("Av. Sapopemba");
+
 console.log(endereco);
