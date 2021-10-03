@@ -6,6 +6,9 @@ class Endereco{
         this.estado = estado;
     }
 
-    
+
 }
 
+
+let endereco = new Encereço("Rua Ernesto Manograsso", "são Matheus", "São Paulo", "SP");
+console.log(endereco);

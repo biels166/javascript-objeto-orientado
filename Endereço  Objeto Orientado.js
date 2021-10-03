@@ -31,8 +31,7 @@ class Endereco {
             
         }
     }
-    
-    
+        
 }
 
 let endereco = new Endereco([{
